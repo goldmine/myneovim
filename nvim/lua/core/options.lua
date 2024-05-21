@@ -35,4 +35,11 @@ opt.termguicolors = true
 opt.signcolumn = "yes"
 vim.cmd[[colorscheme tokyonight-moon]]
 
+--折叠
+opt.foldmethod = "expr"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+opt.foldlevel = 99
+opt.foldlevelstart = 99
+opt.foldtext = ""
+opt.foldnestmax = 4
 
