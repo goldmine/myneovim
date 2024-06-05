@@ -2,6 +2,10 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
+-- ---------- 错误信息---------- ---
+local bufopts = { noremap = true, silent = true, buffer = bufnr }
+keymap.set("n", "<leader>l", vim.diagnostic.open_float, bufopts)
+
 -- ---------- 插入模式 ---------- ---
 keymap.set("i", "jj", "<ESC>")
 
